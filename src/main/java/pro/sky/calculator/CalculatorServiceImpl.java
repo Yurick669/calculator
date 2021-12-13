@@ -4,8 +4,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
-    private int number1;
-    private int number2;
 
 
     @Override
