@@ -45,9 +45,6 @@ public class CalculatorController {
     }
     @GetMapping("/division")
     public String divisionNumbers(@RequestParam int number1, @RequestParam int number2) {
-        if (number2 == 0) {
-            throw  new IllegalArgumentException("На ноль делить нельзя") ;
-        }
         int result = calculatorService.division(number1, number2);
         return generateMessage(number1, number2, '/', result);
     }
