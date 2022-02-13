@@ -1,11 +1,9 @@
-package pro.sky.calculator;
+package pro.sky.calculator.Service;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
-    private int number1;
-    private int number2;
 
 
     @Override
@@ -25,6 +23,9 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public int division(int number1, int number2) {
+        if (number2 == 0) {
+            throw  new IllegalArgumentException("На ноль делить нельзя") ;
+        }
         return number1 / number2;
     }
 

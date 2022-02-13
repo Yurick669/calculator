@@ -1,6 +1,7 @@
-package pro.sky.calculator;
+package pro.sky.calculator.Service;
 
 public interface CalculatorService {
+
 
     int sum(int number1, int number2);
     int subtraction(int number1, int number2);
